@@ -12,27 +12,7 @@ export default {
      * to learn how to generate automatic titles
      */
     title: "ModalButton",
-    component: Modal,
-    argTypes: {
-        modalArgs: {
-            "title": {
-                "description": `Required when the \`<Alert isSmall={false} />\` 
-                (which is the default if \`isSmall\` isn't specified).`,
-                "control": { "type": "string" }
-            },
-            "children": {
-                "description": "",
-                "control": { "type": "string" }
-            },
-            "iconId": {
-                "options": (() => {
-                    const options = ["fr-icon-ancient-gate-fill", "ri-ancient-gate-fill"] as const;
-                    return options;
-                })(),
-                "control": { "type": "radio" }
-            }
-        }
-    }
+    component: Modal
 };
 
 const Template = args => (

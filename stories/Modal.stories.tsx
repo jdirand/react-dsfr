@@ -13,6 +13,14 @@ export default {
     title: "ModalSimple",
     component: Modal,
     argTypes: {
+        "className": {
+            "options": [0, 1],
+            "mapping": ["fr-modal--opened", ""],
+            "control": {
+                "type": "radio",
+                "labels": ["open", "close"]
+            }
+        },
         "title": {
             "description": `Required when the \`<Alert isSmall={false} />\` 
                 (which is the default if \`isSmall\` isn't specified).`,
@@ -31,27 +39,6 @@ export default {
         }
     }
 };
-
-function Story() {
-    return (
-        <>
-            <Button
-                onClick={() => console.log("onClick")}
-                nativeButtonProps={{ "aria-controls": "fr-modal-1" }}
-                data-fr-opened="false"
-            >
-                {" "}
-                Open Modal
-            </Button>
-            <Modal
-                id="fr-modal-1"
-                title="Titre de la modale"
-                iconId="fr-icon-arrow-right-line"
-                children="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit molestie. Mauris malesuada nisi sit amet augue accumsan tincidunt. Maecenas tincidunt, velit ac porttitor pulvinar, tortor eros facilisis libero, vitae commodo nunc quam et ligula. Ut nec ipsum sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer id nisi nec nulla luctus lacinia non eu turpis. Etiam in ex imperdiet justo tincidunt egestas. Ut porttitor urna ac augue cursus tincidunt sit amet sed orci."
-            />
-        </>
-    );
-}
 
 const Template = args => <Modal {...args} />;
 
