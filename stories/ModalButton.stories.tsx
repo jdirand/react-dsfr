@@ -1,10 +1,7 @@
 import * as React from "react";
-import { Modal, ModalProps } from "../dist/Modal";
-import { sectionName } from "./sectionName";
-import { getStoryFactory } from "./getStory";
+import { Modal } from "../dist/Modal";
 import { Button } from "../dist/Button";
 import { ModalClose } from "./Modal.stories";
-import { id } from "tsafe";
 
 export default {
     /* 👇 The title prop is optional.
